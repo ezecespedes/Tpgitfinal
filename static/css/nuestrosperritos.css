@@ -1,0 +1,189 @@
+.activo{
+    color: blue;
+}
+
+
+    .contenedor{
+        width: 98.5%;
+        max-width: auto;
+        margin: 20px auto;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(5,auto);
+    
+        grid-template-areas:"encabezado"
+                            "container"
+                            "caja1"
+                            "caja2"
+                            "barra"
+                            "pie";
+    }
+    
+    
+    
+    .contenedor > div,
+    .contenedor .encabezado,
+    .contenedor .containernuestrosperritos,
+    .contenedor .barranuestrosperritos,
+    .contenedor .cajanuestrosperritos1,
+    .contenedor .cajanuestrosperritos2,
+    .contenedor .pienuestrosperritos {
+        padding: 10px;
+        border-radius: 10px;
+    
+    }
+    
+    .containernuestrosperritos{
+        font-weight: bold;
+        font-size: 20px;
+        grid-area: container
+                
+    }
+    
+    
+    #parrafofoto{
+        padding: 10px;
+        font-size: 30px;
+        font-family: "Pacifico", cursive;
+        text-align: center;
+        color: black;
+    }
+    
+    
+    .perritos{
+        background-color: rgba(224, 243, 237, 0.1);
+        max-width: 600px;
+        width: 60%;
+        padding: auto;
+        margin: auto;
+        box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.6);
+        border-radius: 1%;
+        overflow: hidden;
+    
+    }
+    
+    
+    .galeria{
+        height: auto;
+        max-width: 100%;
+        display: block;
+    }
+    
+    .galeria:hover{
+        transform: scale(1.2);
+    
+    }   
+    
+    .piedefotocaja{
+        max-width: 600px;
+        width: 60%;
+        padding: auto;
+        margin: auto;
+    
+    }
+    
+    
+    .piedefoto:hover{
+        color: red;
+    }
+    
+    .piedefoto{
+        font-size: 20px;
+        font-weight: bold;
+    }
+     
+    
+    
+    .barranuestrosperritos{
+        background-color: #e0f9c8;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        font-weight: bold;
+        color:black;
+        font-size: 20px;
+        grid-area: barra;
+    }
+    
+    
+    .cajanuestrosperritos1{
+        background-color: #e0f9c8;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        font-weight: bold;
+        color:black;
+        font-size: 20px;
+        text-shadow: 2px 1px white;
+        grid-area: caja1;
+    }
+    
+    .cajanuestrosperritos2{
+        background-color:#e0f9c8;
+        background-size: cover;
+        background-position: center;
+        text-align: justify;
+        font-weight: bold;
+        color:black;
+        font-size: 20px;
+        text-shadow: 2px 1px white;
+        text-align: center;
+        grid-area: caja2;
+    }
+    
+    
+    
+    .pienuestrosperritos{
+        background-color: var(--color-primario);
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        font-weight: bold;
+        color:black;
+        font-size: 20px;
+        text-shadow: 2px 1px white;
+        grid-area: pie;
+    
+    
+    }
+    
+    
+    @media screen and (max-width: 900px){
+        .contenedor{
+            grid-template-areas:"encabezado"
+                                "container"
+                                "barra"
+                                "caja1"
+                                "caja2"
+                                "pie"
+                                
+    }
+        }
+    
+    
+    
+    @media screen and (max-width: 768px){
+        .contenedor{
+            grid-template-areas:"encabezado"
+                                "caja1"
+                                "barra"
+                                "caja2"
+                                "container"
+                                "pie";
+                                
+    }
+        }
+    
+    @media screen and (max-width: 450px){
+        .contenedor{
+            grid-template-areas:"encabezado"                    
+                                "caja2"
+                                "container"
+                                "caja1"
+                                "barra"
+                                "pie";
+                    
+    }
+        }
+    

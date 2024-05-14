@@ -1,0 +1,147 @@
+.activo{
+    color: blue;
+}
+
+    .contenedor {
+        width: 98.5%;
+        max-width: auto;
+        margin: 20px auto;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, auto);
+    
+        grid-template-areas:"encabezado encabezado encabezado"
+                            "barra container container"
+                            "caja caja caja"
+                            "caja1 caja1 caja1"
+                            "pie pie pie";
+    
+    
+    
+    }
+    
+    .contenedor > div,
+    .contenedor .encabezado,
+    .contenedor .containerrefugio,
+    .contenedor .barrarefugio,
+    .contenedor .imagenmovimiento,
+    .contenedor .cajarefugio,
+    .contenedor .pierefugio{
+        padding: 5px;
+        border-radius: 10px;
+    
+    }
+    
+    .containerrefugio{
+        background-color: #e0f9c8;
+        text-align: justify;
+        color: rgb(6, 6, 6);
+        font-weight: bold;
+        font-size: 20px;
+        grid-area: container;
+    
+    }
+    
+    
+    .barrarefugio{
+        background-color: #e0f9c8;
+        font-size: 20px;
+        font-weight: bold;
+        align-items: center;
+        grid-area: barra;
+    }
+    
+    
+    .imagenmovimiento{
+        background-image: url('../img/movimiento1.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 40vh;
+        background-position: center;
+        grid-area: caja;
+       
+    
+    
+        animation-name: cambiar;
+        animation-duration: 8s;
+        animation-delay: 2s;
+        animation-iteration-count:infinite;
+    }
+    
+    @keyframes cambiar {
+        20%{background-image: url('../img/movimiento2.jpg');}
+        40%{background-image: url('../img/movimiento3.jpg');}
+        60%{background-image: url('../img/movimiento4.jpg');}
+        80%{background-image: url('../img/movimiento5.jpg');}
+        100%{background-image: url('../img/movimiento6.jpeg');}
+        
+    }
+    
+    .cajarefugio{
+        background-color: #e0f9c8;
+        text-align: center;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        align-items: center;
+        background-size: 100%;
+        position: relative;
+        grid-area: caja1;
+    }
+    
+    
+    
+    .pierefugio{
+        background-color: var(--color-primario);
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        font-weight: bold;
+        color:black;
+        font-size: 20px;
+        text-shadow: 2px 1px white;
+        grid-area: pie;
+    
+    }
+    
+    
+    @media screen and (max-width: 900px){
+        .contenedor{
+            grid-template-areas:"encabezado encabezado encabezado"
+                                "container container container"
+                                "barra barra barra"
+                                "caja caja caja"
+                                "caja1 caja1 caja1"
+                                "pie pie pie";
+                                
+    }
+        }
+    
+    
+    
+    @media screen and (max-width: 768px){
+        .contenedor{
+            grid-template-areas:"encabezado encabezado encabezado"
+                                "barra barra barra"
+                                "container container container"
+                                "caja1 caja1 caja1"
+                                "caja caja caja"
+                                "pie pie pie";
+                                
+    }
+        }
+    
+    @media screen and (max-width: 450px){
+        .contenedor{
+            grid-template-areas:"encabezado encabezado encabezado"
+                                "caja caja caja"
+                                "caja1 caja1 caja1"                    
+                                "barra barra barra"
+                                "container container container"
+                                "pie pie pie";
+                    
+    }
+        }
+    
+        

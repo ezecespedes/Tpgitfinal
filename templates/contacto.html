@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.html">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/index.css"> 
+    <link rel="stylesheet" href="../static/css/contacto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" href="../static/img/ico.png">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="encabezado">
+            <div>
+                <h1>Refugio Patitas</h1>
+                <img class="logo" src="../static/img/logo.avif" alt="logo">
+                <nav>
+                    <a class="hipervinc" href="../index.html">INICIO</a>
+                    <a class="hipervinc" href="../templates/adopcion.html">ADOPCIÓN</a>
+                    <a class="hipervinc" href="../templates/nuestrosperritos.html">NUESTROS PERRITOS</a>
+                    <a class="hipervinc" href="../templates/refugios.html">REFUGIOS</a>
+                    <a class="hipervinc activo" href="../templates/contacto.html">CONTACTOS</a>
+                </nav>
+                <p class="p-1">"Mis perros han sido la razón por la que he despertado todos los días de mi vida con una
+                    sonrisa en la cara" Jennifer Skiff</p>
+            </div>
+        </header>
+        
+        <main class="containercontacto">
+            <h1>Contacto</h1>
+			<br>
+            <p>Todo suma. Cada aporte, cada granito de arena. Por eso te invitamos a sumarte a este proyecto. <br>
+                En el siguiente formulario podes dejar tus datos de contacto. Así estremos más cerca, y formaremos una gran comunidad. <br>
+                también podes compartir fotos de tus perritos, o de aquellos animalitos que sabes que necesitan un hogar que los reciba.</p>
+			<br>
+		</main>
+       <aside class="barracontacto">
+        <form action="" class="formulario" id="formulario">
+			<!-- Grupo: Usuario -->
+			<div class="formulario__grupo" id="grupo__usuario">
+				<label for="usuario" class="formulario__label">Usuario</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Eze123">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+			</div>
+
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Juan Pérez">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+			</div>
+
+			<!-- Grupo: Contraseña -->
+			<div class="formulario__grupo" id="grupo__password">
+				<label for="password" class="formulario__label">Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password" id="password">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+			</div>
+
+			<!-- Grupo: Contraseña 2 -->
+			<div class="formulario__grupo" id="grupo__password2">
+				<label for="password2" class="formulario__label">Repetir Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password2" id="password2">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+			</div>
+
+			<!-- Grupo: Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+			</div>
+
+			<!-- Grupo: Teléfono -->
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Teléfono</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+			</div>
+
+			<!-- Grupo: Terminos y Condiciones -->
+			<div class="formulario__grupo" id="grupo__terminos">
+				<label class="formulario__label">
+					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+					Acepto los Terminos y Condiciones
+				</label>
+			</div>
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Enviar</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+			</div>
+		</form>
+    </aside>
+
+        <footer class="piecontacto">
+            <div>
+                <div id="hoverpie">
+                    <img class="logo" src="../static/img/Twitter.jpg" alt="x">
+                    <a class="hiperfooter" href ="https://twitter.com/?lang=es" target="_blank">Twitter</a> 
+                    <img class="logo" src="../static/img/facebook.png" alt="face">
+                    <a class="hiperfooter" href="https://www.facebook.com/?locale=es_LA" target="_blank">Facebook</a>
+                </div>
+                <div>
+                    <h5>Copyright &copy; 2024 Ezequiel Cespedes - Ricardo González</h5>
+                </div>
+            </div>
+        </footer>
+		<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+        <script src="../static/js/formulario.js"></script>
+</body>
+
+
+</html>
